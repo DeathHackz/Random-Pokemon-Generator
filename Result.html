@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Who's Your Pok&eacute;mon?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/mholt/PapaParse/master/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"  />
+  <link rel="stylesheet" href="css/Index.css">
+  <link rel="stylesheet" href="css/Result.css">
+  <script src="js/Index.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Include Date Range Picker -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+</head>
+
+<body onload="getPokemon(), SetBday(), settxt(), SneekSocial()">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <span onclick="hideads()"><img src="site_icon.gif" width="50" height="50" /></span>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="#" data-toggle="modal" onfocusout="stopstarttime()" onclick="defaultstart()" data-target="#OtherProjModal">Other Projects</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#AboutModal">About</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#ContactModal">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="rellogin"><a href="Login.html"><span class="fas fa-user">&nbsp;</span><span>Login</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="AboutModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">About Me ;)</h4>
+        </div>
+        <div class="modal-body">
+          <p>I'm a Hacker, I hacked the government multiple times, and I am the one who rigged the elections. I am on every federal watchlist because of my God-like hacking skillz. I am a MLG Pro hacker, who hacks with Mtn' Dew, and Doritos.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="ContactModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Contact</h4>
+        </div>
+        <div class="modal-body">
+          <p>Stalk someone else, k?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="OtherProjModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Other Projects</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            Redirecting To CodePen In <span id="countdown"></span>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="stopstarttime()" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" onclick="enterstuff()" id="UserValue" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Secret Menu</h4>
+        </div>
+        <div id="modbg" class="modal-body ui-front">
+          <h1 id="t1">Enter Pok&eacute;mon Name or id to load</h1>
+          <input type="text" id="UserChoice" onkeyup="blockrunbtn()" class="form-control" autocomplete="disabled" name="UserPick" placeholder="Pok&eacute;mon Name or id  (1-802)" />
+          <div id="linebreaks" hidden><br /><br /><br /><br /><br /><br /><br /></div>
+        </div>
+        <div class="modal-footer">
+          <button id="cstmrunpkm" type="button" onclick="CustomPkm()" class="btn btn-default">Run</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div id="ad" class="col-sm-2 sidenav">
+        <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad2" src="ads/ad2.gif" alt="Stop Using Adblock!" width="120" height="600" /></a>
+      </div>
+      <div class="col-sm-8 text-left">
+        <h1><span id="birtday"></span></h1>
+        <h1>"<a class="text-capitalize" title="" target="_blank" id="pkmnamedblk"><span class="text-capitalize" id="pkmname"><img id="loadingname" src="loadingalt.gif" height="50px"/></span></a>" is your <a id="hiddenbtn" onclick="blockrunbtn()" data-toggle="modal" data-target="#UserValue">special</a> Pok&eacute;mon!</h1>
+        <p>This is your Pok&eacute;mon, now you can share this with your friends, download the image to your hard drive, or click its name for more info on it. </p>
+        <p>
+          Dont like your Pok&eacute;mon? <a id="reroll" onclick="reroll()">Click Here</a> to re-roll and get another Pok&eacute;mon.
+        </p>
+        <p style="font-weight:  bold;"><span id="iknowu"></span></p>
+        <hr>
+
+        <table id="artworktable" class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <td id="tablecol3">
+                <figure>
+                  <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmartwork" width="200" />
+                  <figcaption>Officcial Artwork</figcaption>
+                </figure>
+              </td>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
+
+        <table id="pkmspritetable" class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="text-center" colspan="4" scope="col">Sprite Chart</th>
+            </tr>
+            <tr>
+              <th class="text-center" colspan="2" scope="col">Gen 5</th>
+              <th class="text-center" colspan="2" scope="col">Gen 6</th>
+            </tr>
+            <tr>
+              <th class="text-center" scope="col">Normal</th>
+              <th class="text-center" scope="col">Animated</th>
+              <th class="text-center" scope="col">Normal</th>
+              <th class="text-center" scope="col">Animated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="tablecol1">
+                <figure>
+                <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmNormSprite" />
+                </figure>
+              </td>
+              <td id="tablecol7">
+                <figure>
+                  <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmNormSpriteani" wdith="100%"  />
+                </figure>
+              </td>
+              <td id="tablecol4">
+                <figure>
+                  <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmNormG6Sprite" wdith="100%"  />
+                </figure>
+              </td>
+              <td id="tablecol8">
+                <figure>
+                  <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmNormG6aniSprite" wdith="100%"  />
+                </figure>
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center" colspan="2" scope="col">Shiny</th>
+              <th class="text-center" colspan="2" scope="col">Shiny</th>
+            </tr>
+            <tr>
+              <td id="tablecol2">
+                <figure>
+                  <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmShinySprite" wdith="100%"  />
+                </figure>
+              </td>
+              <td id="tablecol6">
+                <figure>
+                  <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmShinySpriteani" wdith="100%"  />
+                </figure>
+              </td>
+              <td id="tablecol5">
+                <figure>
+                  <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmShinyG6Sprite" wdith="100%"  />
+                </figure>
+              </td>
+              <td id="tablecol9">
+                <figure>
+                  <img src="data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==" id="pkmShinyG6aniSprite" wdith="100%"  />
+                </figure>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><span id="requesttime"></span></p>
+
+        <div id="DownloadBtn" class="text-center">
+          <a id="pkmdownload" class="btn btn-success btn-xl" disabled href="" download="">Download</a>
+        </div>
+
+        <ul class="icons">
+          <li><a onclick="return !window.open(this.href, 'facebook', 'width=500,height=500')" target="_blank" id="fbs"><i class="fa fa-facebook"></i></a></li>
+          <li><a onclick="return !window.open(this.href, 'twitter', 'width=500,height=500')" target="_blank" id="twitshare"><i class="fa fa-twitter"></i></a></li>
+          <li><a onclick="return !window.open(this.href, 'googleplus', 'width=500,height=500')" target="_blank" id="goglps"><i class="fab fa-google-plus-g"></i></a></li>
+        </ul>
+        <div id="resetdiv"><a href="#" id="reset" class="btn btn-danger" name="submit" type="submit" onclick="dellocalstorage(), yurr()">Clear localStorage</a></div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th style="width: 970px;">
+                <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad3" src="ads/ad3.gif" alt="Stop Using Adblock!" width="100%" height="100%" /></a>
+              </th>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div id="ad" class="col-sm-2 sidenav">
+        <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad1" src="ads/ad1.gif" alt="Stop Using Adblock!" width="120" height="600" /></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p><span class="glyphicon glyphicon-copyright-mark"></span> </span> DeathHackz 2018</p>
+  </footer>
+
+</body>
+
+</html>

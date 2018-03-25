@@ -1,0 +1,64 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.row.content {
+  height: 450px;
+}
+
+.sidenav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* background-color: #f1f1f1; */
+  height: 100%;
+}
+
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+    display: none;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+
+.btn[disabled] {
+  pointer-events: none;
+}
+
+input {
+  text-align: center;
+}
+
+h1, p {
+  text-align: center;
+}
+
+.bootstrap-iso {
+  text-align: center;
+  width: 100%;
+}
+
+#ad {
+  height: auto;
+}
+
+#ad3 {
+  padding-bottom: 10px;
+  max-width: 970px;
+  max-height: 250px;
+}
+
+.table>thead>tr>th {
+  border-bottom: 0;
+}

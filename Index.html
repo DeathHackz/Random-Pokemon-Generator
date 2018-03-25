@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Who's Your Pok&eacute;mon?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/Index.css">
+  <script src="js/Index.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Include Date Range Picker -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+</head>
+
+<body onload="settxt(), Birthday()">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <span onclick="hideads()"><img src="site_icon.gif" width="50" height="50" /></span>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#" data-toggle="modal" onfocusout="stopstarttime()" onclick="defaultstart()" data-target="#OtherProjModal">Other Projects</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#AboutModal">About</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#ContactModal">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li id="nologin"><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+          <li id="rellogin" title=""><a href="Login.html"><span class="fas fa-user">&nbsp;</span><span>Login</span></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="AboutModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">About Me ;)</h4>
+        </div>
+        <div class="modal-body">
+          <p>I'm a Hacker, I hacked the government multiple times, and I am the one who rigged the elections. I am on every federal watchlist because of my God-like hacking skillz. I am a MLG Pro hacker, who hacks with Mtn' Dew, and Doritos.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="ContactModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Contact</h4>
+        </div>
+        <div class="modal-body">
+          <p>Stalk someone else, k?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="OtherProjModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Other Projects</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            Redirecting To CodePen In <span id="countdown"></span>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="stopstarttime()" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div id="ad" class="col-sm-2 sidenav">
+        <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad2" src="ads/ad2.gif" alt="Stop Using Adblock!" width="120" height="600" /></a>
+      </div>
+      <div class="col-sm-8 text-left">
+        <h1>Find out who your special Pok&eacute;mon is!</h1>
+        <p>Just enter in your birthday below and submit, and your special Pok&eacute;mon will be found and cought for you!</p>
+        <hr>
+        <!-- Date Picker -->
+        <div class="bootstrap-iso">
+          <div class="container-fluid">
+            <div class="col-md-4 col-sm-4 col-xs-12"><br /></div>
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+
+                <!-- Form code begins -->
+                <form method="post">
+                  <div class="form-group">
+                    <!-- Date input -->
+                    <label class="control-label" for="date">Enter Your Birthday</label>
+                    <input class="form-control" id="date" autocomplete="off" onfocusout="allFilled()" name="date" placeholder="Month, Day, Year" type="text" />
+                  </div>
+                  <div class="form-group">
+                    <!-- Submit button -->
+                    <a href="Result.html" id="submitbtn" class="btn btn-primary" name="submit" type="submit" onclick="Birthday()" disabled="disabled">Submit</a>
+                  </div>
+                </form>
+                <a href="#" id="reset" class="btn btn-danger" name="submit" type="submit" onclick="dellocalstorage(), yurr()">Clear localStorage</a>
+                <!-- Form code ends -->
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12"><br /></div>
+          </div>
+        </div>
+        <p>
+          This is a legit site, for relz
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th style="width: 970px;">
+                <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad3" src="ads/ad3.gif" alt="Stop Using Adblock!" width="100%" height="100%" /></a>
+              </th>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div id="ad" class="col-sm-2 sidenav">
+        <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad1" src="ads/ad1.gif" alt="Stop Using Adblock!" width="120" height="600" /></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p><span class="glyphicon glyphicon-copyright-mark"></span> </span> DeathHackz 2018</p>
+  </footer>
+
+</body>
+
+</html>
