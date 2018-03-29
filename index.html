@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 </head>
 
-<body onload="settxt(), Birthday()">
+<body onload="Birthday()">
 
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <span onclick="hideads()"><img src="site_icon.gif" width="50" height="50" /></span>
+        <span onclick="hideads()"><img src="imgs/site_icon.gif" width="50" height="50" /></span>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
@@ -39,11 +39,6 @@
           <li><a href="#" data-toggle="modal" onfocusout="stopstarttime()" onclick="defaultstart()" data-target="#OtherProjModal">Other Projects</a></li>
           <li><a href="#" data-toggle="modal" data-target="#AboutModal">About</a></li>
           <li><a href="#" data-toggle="modal" data-target="#ContactModal">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <!-- <li id="nologin"><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
-          <li id="rellogin" title=""><a href="Login.html"><span class="fas fa-user">&nbsp;</span><span>Login</span></a></li>
-
         </ul>
       </div>
     </div>

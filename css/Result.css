@@ -100,7 +100,7 @@ figure img {
   font-size: 20px;
   text-align: center;
   cursor: not-allowed;
-  background-image: url("../loading.gif");
+  background-image: url("../imgs/loading.gif");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -151,7 +151,7 @@ figure img {
 }
 
 #linebreaks {
-  background-image: url("../loading.gif");
+  background-image: url("../imgs/loading.gif");
   background-repeat: no-repeat;
   background-position: center;
 }

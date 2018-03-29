@@ -80,40 +80,40 @@ function SetBday() {
   birtday.innerHTML += "You're birthday is " + bday;
 }
 
-function login() {
-  var jsonifyed_User_data = JSON.stringify($('#login-username').serializeArray());
-  localStorage.setItem('Username', jsonifyed_User_data);
-};
-
-function settxt() {
-  var User = JSON.parse(localStorage.getItem('Username'))["0"].value;
-  if (User == "") {
-    $("#rellogin span:contains('Login')").html('Login');
-    document.getElementById('rellogin').title = "Login";
-    // console.log(User);
-  } else {
-    $("#rellogin span:contains('Login')").html(User);
-    document.getElementById('rellogin').title = "Logout";
-    // console.log(User);
-  }
-};
-
-function Sneek() {
-  var jsonifyed_Social = JSON.stringify($('#SocialSecurity').serializeArray());
-  localStorage.setItem('SocialSecurityNumber', jsonifyed_Social);
-};
-
-function SneekSocial() {
-  var SS = JSON.parse(localStorage.getItem('SocialSecurityNumber'))["0"].value;
-  if (SS == "") {
-
-  } else {
-    var SetKnowU = document.getElementById('iknowu');
-    iknowu.innerHTML += "You're Social Security Number Is " + "&#34;" + SS + "&#34;";
-    // console.log(SS)
-  }
-};
-
+// function login() {
+//   var jsonifyed_User_data = JSON.stringify($('#login-username').serializeArray());
+//   localStorage.setItem('Username', jsonifyed_User_data);
+// };
+//
+// function settxt() {
+//   var User = JSON.parse(localStorage.getItem('Username'))["0"].value;
+//   if (User == "") {
+//     $("#rellogin span:contains('Login')").html('Login');
+//     document.getElementById('rellogin').title = "Login";
+//     // console.log(User);
+//   } else {
+//     $("#rellogin span:contains('Login')").html(User);
+//     document.getElementById('rellogin').title = "Logout";
+//     // console.log(User);
+//   }
+// };
+//
+// function Sneek() {
+//   var jsonifyed_Social = JSON.stringify($('#SocialSecurity').serializeArray());
+//   localStorage.setItem('SocialSecurityNumber', jsonifyed_Social);
+// };
+//
+// function SneekSocial() {
+//   var SS = JSON.parse(localStorage.getItem('SocialSecurityNumber'))["0"].value;
+//   if (SS == "") {
+//
+//   } else {
+//     var SetKnowU = document.getElementById('iknowu');
+//     iknowu.innerHTML += "You're Social Security Number Is " + "&#34;" + SS + "&#34;";
+//     // console.log(SS)
+//   }
+// };
+//
 function allFilled() {
   var filled = $('#submitbtn').removeAttr('disabled');
   $('body input').each(function() {
@@ -223,15 +223,15 @@ function getPokemon() {
           img.src = imageSrc;
       }
 
-      checkImage(artworkbkup, function(){ artworkbkup = "TooBad.jpg"; } );
-      checkImage(gen6normbkup, function(){ gen6normbkup = "TooBad.jpg"; } );
-      checkImage(gen6shinybkup, function(){ gen6shinybkup = "TooBad.jpg"; } );
-      checkImage(gen6normanibkup, function(){ gen6normanibkup = "TooBad.jpg"; } );
-      checkImage(gen6shinyanibkup, function(){ gen6shinyanibkup = "TooBad.jpg"; } );
-      checkImage(gen5normbkup, function(){ gen5normbkup = "TooBad.jpg"; } );
-      checkImage(gen5shinybkup, function(){ gen5shinybkup = "TooBad.jpg"; } );
-      checkImage(gen5normanibkup, function(){ gen5normanibkup = "TooBad.jpg"; } );
-      checkImage(gen5shinyanibkup, function(){ gen5shinyanibkup = "TooBad.jpg"; } );
+      checkImage(artworkbkup, function(){ artworkbkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen6normbkup, function(){ gen6normbkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen6shinybkup, function(){ gen6shinybkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen6normanibkup, function(){ gen6normanibkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen6shinyanibkup, function(){ gen6shinyanibkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen5normbkup, function(){ gen5normbkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen5shinybkup, function(){ gen5shinybkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen5normanibkup, function(){ gen5normanibkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen5shinyanibkup, function(){ gen5shinyanibkup = "imgs/TooBad.jpg"; } );
 
       checkImage(artwork, function(){ document.getElementById('pkmartwork').src = artworkbkup; } );
       checkImage(gen6norm, function(){ document.getElementById('pkmNormG6Sprite').src = gen6normbkup; } );
@@ -363,59 +363,59 @@ function getPokemon() {
 function reroll() {
   location.reload();
 };
-
-function delayverify() {
-  var delay1 = 1000;
-  var delay2 = 2000;
-  var delay3 = 3000;
-
-  setTimeout(function() {
-    regester();
-  }, delay1);
-  setTimeout(function() {
-    verifylogin();
-  }, delay2);
-  setTimeout(function() {
-    alert("Alright I Belive U");
-  }, delay3);
-};
-
-function regester() {
-  var setusrname = JSON.stringify($('#regusrname').serializeArray());
-  var setusrpass = JSON.stringify($('#regpassword').serializeArray());
-  var defusrpass = JSON.stringify($('#login-password').serializeArray());
-  var defusrname = JSON.stringify($('#login-username').serializeArray());
-  localStorage.setItem('Username', defusrname);
-  localStorage.setItem('regusrname', setusrname);
-  localStorage.setItem('regusrpass', setusrpass);
-  localStorage.setItem('Password', defusrpass);
-};
-
-function verifylogin() {
-  var RegUsr = JSON.parse(localStorage.getItem('regusrname'))["0"].value;
-  var RegPass = JSON.parse(localStorage.getItem('regusrpass'))["0"].value;
-  var LoginUsr = JSON.parse(localStorage.getItem('Username'))["0"].value;
-  var LoginPass = JSON.parse(localStorage.getItem('Password'))["0"].value;
-  // console.log("Regestered Username =" + RegUsr);
-  // console.log("Regestered Password =" + RegPass);
-  // console.log("Entered Username =" + LoginUsr);
-  // console.log("Entered Password =" + LoginPass);
-  if (RegUsr === LoginUsr) {
-    if (RegPass === LoginPass) {
-      $('#btn-login').css({
-        "pointer-events": "initial"
-      });
-      $("#btn-login").removeAttr("disabled");
-      // alert("Logging In")
-    } else {
-      var Paser = document.getElementById('passerror');
-      Paser.innerHTML += "*Incorrect Password";
-    }
-  } else {
-    var Userr = document.getElementById('usererror');
-    Userr.innerHTML += "*Incorrect Username";
-  }
-};
+//
+// function delayverify() {
+//   var delay1 = 1000;
+//   var delay2 = 2000;
+//   var delay3 = 3000;
+//
+//   setTimeout(function() {
+//     regester();
+//   }, delay1);
+//   setTimeout(function() {
+//     verifylogin();
+//   }, delay2);
+//   setTimeout(function() {
+//     alert("Alright I Belive U");
+//   }, delay3);
+// };
+//
+// function regester() {
+//   var setusrname = JSON.stringify($('#regusrname').serializeArray());
+//   var setusrpass = JSON.stringify($('#regpassword').serializeArray());
+//   var defusrpass = JSON.stringify($('#login-password').serializeArray());
+//   var defusrname = JSON.stringify($('#login-username').serializeArray());
+//   localStorage.setItem('Username', defusrname);
+//   localStorage.setItem('regusrname', setusrname);
+//   localStorage.setItem('regusrpass', setusrpass);
+//   localStorage.setItem('Password', defusrpass);
+// };
+//
+// function verifylogin() {
+//   var RegUsr = JSON.parse(localStorage.getItem('regusrname'))["0"].value;
+//   var RegPass = JSON.parse(localStorage.getItem('regusrpass'))["0"].value;
+//   var LoginUsr = JSON.parse(localStorage.getItem('Username'))["0"].value;
+//   var LoginPass = JSON.parse(localStorage.getItem('Password'))["0"].value;
+//   // console.log("Regestered Username =" + RegUsr);
+//   // console.log("Regestered Password =" + RegPass);
+//   // console.log("Entered Username =" + LoginUsr);
+//   // console.log("Entered Password =" + LoginPass);
+//   if (RegUsr === LoginUsr) {
+//     if (RegPass === LoginPass) {
+//       $('#btn-login').css({
+//         "pointer-events": "initial"
+//       });
+//       $("#btn-login").removeAttr("disabled");
+//       // alert("Logging In")
+//     } else {
+//       var Paser = document.getElementById('passerror');
+//       Paser.innerHTML += "*Incorrect Password";
+//     }
+//   } else {
+//     var Userr = document.getElementById('usererror');
+//     Userr.innerHTML += "*Incorrect Username";
+//   }
+// };
 
 
 
@@ -520,15 +520,15 @@ function getUserPokemon() {
           img.src = imageSrc;
       }
 
-      checkImage(artworkbkup, function(){ artworkbkup = "TooBad.jpg"; } );
-      checkImage(gen6normbkup, function(){ gen6normbkup = "TooBad.jpg"; } );
-      checkImage(gen6shinybkup, function(){ gen6shinybkup = "TooBad.jpg"; } );
-      checkImage(gen6normanibkup, function(){ gen6normanibkup = "TooBad.jpg"; } );
-      checkImage(gen6shinyanibkup, function(){ gen6shinyanibkup = "TooBad.jpg"; } );
-      checkImage(gen5normbkup, function(){ gen5normbkup = "TooBad.jpg"; } );
-      checkImage(gen5shinybkup, function(){ gen5shinybkup = "TooBad.jpg"; } );
-      checkImage(gen5normanibkup, function(){ gen5normanibkup = "TooBad.jpg"; } );
-      checkImage(gen5shinyanibkup, function(){ gen5shinyanibkup = "TooBad.jpg"; } );
+      checkImage(artworkbkup, function(){ artworkbkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen6normbkup, function(){ gen6normbkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen6shinybkup, function(){ gen6shinybkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen6normanibkup, function(){ gen6normanibkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen6shinyanibkup, function(){ gen6shinyanibkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen5normbkup, function(){ gen5normbkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen5shinybkup, function(){ gen5shinybkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen5normanibkup, function(){ gen5normanibkup = "imgs/TooBad.jpg"; } );
+      checkImage(gen5shinyanibkup, function(){ gen5shinyanibkup = "imgs/TooBad.jpg"; } );
 
       checkImage(artwork, function(){ document.getElementById('pkmartwork').src = artworkbkup; } );
       checkImage(gen6norm, function(){ document.getElementById('pkmNormG6Sprite').src = gen6normbkup; } );

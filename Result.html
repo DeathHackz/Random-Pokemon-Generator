@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 </head>
 
-<body onload="getPokemon(), SetBday(), settxt(), SneekSocial()">
+<body onload="getPokemon(), SetBday()">
 
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -32,7 +32,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <span onclick="hideads()"><img src="site_icon.gif" width="50" height="50" /></span>
+        <span onclick="hideads()"><img src="imgs/site_icon.gif" width="50" height="50" /></span>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
@@ -40,9 +40,6 @@
           <li><a href="#" data-toggle="modal" onfocusout="stopstarttime()" onclick="defaultstart()" data-target="#OtherProjModal">Other Projects</a></li>
           <li><a href="#" data-toggle="modal" data-target="#AboutModal">About</a></li>
           <li><a href="#" data-toggle="modal" data-target="#ContactModal">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li id="rellogin"><a href="Login.html"><span class="fas fa-user">&nbsp;</span><span>Login</span></a></li>
         </ul>
       </div>
     </div>
@@ -135,7 +132,7 @@
       </div>
       <div class="col-sm-8 text-left">
         <h1><span id="birtday"></span></h1>
-        <h1>"<a class="text-capitalize" title="" target="_blank" id="pkmnamedblk"><span class="text-capitalize" id="pkmname"><img id="loadingname" src="loadingalt.gif" height="50px"/></span></a>" is your <a id="hiddenbtn" onclick="blockrunbtn()" data-toggle="modal" data-target="#UserValue">special</a> Pok&eacute;mon!</h1>
+        <h1>"<a class="text-capitalize" title="" target="_blank" id="pkmnamedblk"><span class="text-capitalize" id="pkmname"><img id="loadingname" src="imgs/loadingalt.gif" height="50px"/></span></a>" is your <a id="hiddenbtn" onclick="blockrunbtn()" data-toggle="modal" data-target="#UserValue">special</a> Pok&eacute;mon!</h1>
         <p>This is your Pok&eacute;mon, now you can share this with your friends, download the image to your hard drive, or click its name for more info on it. </p>
         <p>
           Dont like your Pok&eacute;mon? <a id="reroll" onclick="reroll()">Click Here</a> to re-roll and get another Pok&eacute;mon.
