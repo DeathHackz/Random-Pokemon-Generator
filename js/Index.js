@@ -7,7 +7,7 @@ Papa.parse("https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv
   header: true,
   preview: 0,
   complete: function(results) {
-  	console.log("Parsing complete:", results);
+  	// console.log("Parsing complete:", results);
     var length = results.data.length;
     // console.log(length);
     for (i = 0; i < length; i++) {
@@ -47,7 +47,7 @@ function yurr() {
     myWindow.close();
   }, delayInMilliseconds);
   setTimeout(function() {
-    window.location.replace("Index.html");
+    window.location.replace("index.html");
   }, delayInMillisecondsnx);
   setTimeout(function() {
     alert("localStorage data has been cleared");
@@ -334,17 +334,17 @@ function getPokemon() {
       // var prtbd = document.getElementById('birtday');
       // birtday.innerHTML += "You're birthday is " + bday;
 
-      console.log("Pokedex Number: ", pokeID);
-      console.log("Name: ", pokeNameUp);
-      console.log("Normal Sprite: ", pokeNormSprite);
+      // console.log("Pokedex Number: ", pokeID);
+      // console.log("Name: ", pokeNameUp);
+      // console.log("Normal Sprite: ", pokeNormSprite);
       // console.log("Normla Sprite Back: ", pokeNormSpriteBk);
-      console.log("Shiny Sprite: ", pokeShinySprite);
+      // console.log("Shiny Sprite: ", pokeShinySprite);
       // console.log("Shiny Sprite Back: ", pokeShinySpriteBk);
-      console.log("Type 1: ", pokeType1);
-      console.log("Type 2: ", pokeType2);
+      // console.log("Type 1: ", pokeType1);
+      // console.log("Type 2: ", pokeType2);
 
       var end = new Date().getTime();
-      console.log('Milliseconds Passed', end - start);
+      // console.log('Milliseconds Passed', end - start);
       var endresult = end - start;
 
       var requesttime = document.getElementById('requesttime');
@@ -396,10 +396,10 @@ function verifylogin() {
   var RegPass = JSON.parse(localStorage.getItem('regusrpass'))["0"].value;
   var LoginUsr = JSON.parse(localStorage.getItem('Username'))["0"].value;
   var LoginPass = JSON.parse(localStorage.getItem('Password'))["0"].value;
-  console.log("Regestered Username =" + RegUsr);
-  console.log("Regestered Password =" + RegPass);
-  console.log("Entered Username =" + LoginUsr);
-  console.log("Entered Password =" + LoginPass);
+  // console.log("Regestered Username =" + RegUsr);
+  // console.log("Regestered Password =" + RegPass);
+  // console.log("Entered Username =" + LoginUsr);
+  // console.log("Entered Password =" + LoginPass);
   if (RegUsr === LoginUsr) {
     if (RegPass === LoginPass) {
       $('#btn-login').css({
@@ -634,14 +634,14 @@ function getUserPokemon() {
         $("#UserChoice").val('');
 
 
-      console.log("Pokedex Number: ", pokeID);
-      console.log("Name: ", pokeNameUp);
-      console.log("Normal Sprite: ", pokeNormSprite);
+      // console.log("Pokedex Number: ", pokeID);
+      // console.log("Name: ", pokeNameUp);
+      // console.log("Normal Sprite: ", pokeNormSprite);
       // console.log("Normla Sprite Back: ", pokeNormSpriteBk);
-      console.log("Shiny Sprite: ", pokeShinySprite);
+      // console.log("Shiny Sprite: ", pokeShinySprite);
       // console.log("Shiny Sprite Back: ", pokeShinySpriteBk);
-      console.log("Type 1: ", pokeType1);
-      console.log("Type 2: ", pokeType2);
+      // console.log("Type 1: ", pokeType1);
+      // console.log("Type 2: ", pokeType2);
 
       var end = new Date().getTime();
       console.log('Milliseconds Passed', end - start);
