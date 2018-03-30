@@ -132,7 +132,6 @@ figure img {
 
 @media screen and (max-width: 767px) {
   td {
-    display: block;
     width: 100% !important;
     height: 100% !important;
   }
