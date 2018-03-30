@@ -4,7 +4,9 @@ Generate a random pokémon based on your birthday
 This is a noob project that generates a random pok&eacute;mon based on your birthday.
 
 (This is not well made by no means at all)
-<br />
+
+Feel free to report [issues](https://github.com/DeathHackz/Random-Pokemon-Generator/issues/new), or make [useful edits](https://github.com/DeathHackz/Random-Pokemon-Generator/compare)
+
 Check it out at https://deathhackz.github.io/Random-Pokemon-Generator
 
 ## How does it work?
