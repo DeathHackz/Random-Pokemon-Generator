@@ -30,7 +30,7 @@ for (var i = 0; i < 365; i++) {
     Number: numcheck[i].Number
   });
   if (days[i].Date === givendate) {
-    console.log(days[i].Date, days[i].Number);
+    console.log("Birthday: " + days[i].Date, "Pokemon ID: " + days[i].Number);
     FinalVal = days[i].Number;
   } else {
     // console.log("Sike");
