@@ -79,6 +79,7 @@ function getPokemon() {
       var gen5normanibkup = "https://play.pokemonshowdown.com/sprites/bwani/" + fetchname + ".gif"
       var gen5shinyanibkup = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + fetchname + ".gif"
 
+      document.title = pokeNameUp + " is your special Pok" + "\xE9" + "mon!";
       function checkImage(imageSrc, bad, good) {
         var img = new Image();
         img.onload = good;
@@ -349,6 +350,8 @@ function getUserPokemon() {
       var gen5shinybkup = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + fetchname + ".png"
       var gen5normanibkup = "https://play.pokemonshowdown.com/sprites/bwani/" + fetchname + ".gif"
       var gen5shinyanibkup = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + fetchname + ".gif"
+
+      document.title = pokeNameUp + " is your special Pok" + "\xE9" + "mon!";
 
       function checkImage(imageSrc, bad, good) {
         var img = new Image();

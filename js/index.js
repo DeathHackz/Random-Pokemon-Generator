@@ -10,18 +10,8 @@ function hideads() {
 
 function dellocalstorage() {
   localStorage.clear();
-};
-
-function yurr() {
-  var delayInMilliseconds = 1000;
-  var delayInMillisecondsnx = 2000;
-
-  setTimeout(function() {
-    window.location.replace("index.html");
-  }, delayInMillisecondsnx);
-  setTimeout(function() {
-    alert("localStorage data has been cleared");
-  }, delayInMillisecondsnx);
+  alert("localStorage data has been cleared");
+  window.location.replace("index.html");
 };
 
 // Calender JS
