@@ -33,19 +33,25 @@ function hideads() {
   $('#ad2').toggle();
   $('#ad3').toggle();
 }
-
+function UnlockPkm() {
+  var delayInMillisecondsnx = 10000;
+  $("#hiddenbtn").attr("data-toggle", 'modal');
+  setTimeout(function() {
+    $("#hiddenbtn").removeAttr("data-toggle", 'modal');
+  }, delayInMillisecondsnx);
+}
 function dellocalstorage() {
   localStorage.clear();
 };
 
 function yurr() {
-  myWindow = window.open("ignoreme.html", "_blank", "width=1, height=1");
+  // myWindow = window.open("ignoreme.html", "_blank", "width=1, height=1");
   var delayInMilliseconds = 1000;
   var delayInMillisecondsnx = 2000;
 
-  setTimeout(function() {
-    myWindow.close();
-  }, delayInMilliseconds);
+  // setTimeout(function() {
+  //   myWindow.close();
+  // }, delayInMilliseconds);
   setTimeout(function() {
     window.location.replace("index.html");
   }, delayInMillisecondsnx);
@@ -163,7 +169,8 @@ function stopstarttime() {
 
 function getPokemon() {
   // Get random number. Make sure not less than 1
-  var randomNum = Math.floor(Math.random() * (802 - 1 + 1)) + 1;
+  var randomNum = FinalVal;
+  // var randomNum = Math.floor(Math.random() * (802 - 1 + 1)) + 1;
   // console.log(randomNum);
   // Debug Value //
   // var randomNum = "786";
@@ -360,9 +367,6 @@ function getPokemon() {
 
 };
 
-function reroll() {
-  location.reload();
-};
 //
 // function delayverify() {
 //   var delay1 = 1000;
