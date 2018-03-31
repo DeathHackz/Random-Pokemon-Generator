@@ -87,34 +87,6 @@ function getPokemon() {
         img.src = imageSrc;
       }
 
-      checkImage(artworkbkup, function() {
-        artworkbkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen6normbkup, function() {
-        gen6normbkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen6shinybkup, function() {
-        gen6shinybkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen6normanibkup, function() {
-        gen6normanibkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen6shinyanibkup, function() {
-        gen6shinyanibkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen5normbkup, function() {
-        gen5normbkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen5shinybkup, function() {
-        gen5shinybkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen5normanibkup, function() {
-        gen5normanibkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen5shinyanibkup, function() {
-        gen5shinyanibkup = "imgs/TooBad.jpg";
-      });
-
       checkImage(artwork, function() {
         document.getElementById('pkmartwork').src = artworkbkup;
       });
@@ -122,7 +94,7 @@ function getPokemon() {
         document.getElementById('pkmNormG6Sprite').src = gen6normbkup;
       });
       checkImage(gen6shiny, function() {
-        document.getElementById('pkmShinyG6Sprite').src = gen6shinyanibkup;
+        document.getElementById('pkmShinyG6Sprite').src = gen6shinybkup;
       });
       checkImage(gen6normani, function() {
         document.getElementById('pkmNormG6aniSprite').src = gen6normanibkup;
@@ -359,34 +331,6 @@ function getUserPokemon() {
         img.onerror = bad;
         img.src = imageSrc;
       }
-
-      checkImage(artworkbkup, function() {
-        artworkbkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen6normbkup, function() {
-        gen6normbkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen6shinybkup, function() {
-        gen6shinybkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen6normanibkup, function() {
-        gen6normanibkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen6shinyanibkup, function() {
-        gen6shinyanibkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen5normbkup, function() {
-        gen5normbkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen5shinybkup, function() {
-        gen5shinybkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen5normanibkup, function() {
-        gen5normanibkup = "imgs/TooBad.jpg";
-      });
-      checkImage(gen5shinyanibkup, function() {
-        gen5shinyanibkup = "imgs/TooBad.jpg";
-      });
 
       checkImage(artwork, function() {
         document.getElementById('pkmartwork').src = artworkbkup;

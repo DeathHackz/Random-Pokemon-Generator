@@ -2,6 +2,12 @@ $(function() {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+function imgError(image) {
+    image.onerror = "";
+    image.src = "imgs/TooBad.jpg";
+    return true;
+}
+
 function hideads() {
   $('#ad1').toggle();
   $('#ad2').toggle();
