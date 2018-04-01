@@ -56,10 +56,12 @@ function getPokemon() {
       } else var pokeType2 = null;
 
       var pokeNameUp = pokeName.substr(0, 1).toUpperCase() + pokeName.substr(1);
+      localStorage.setItem('PokemonName', pokeNameUp);
       // console.log(pokeNameUp);
       var fetchname = pokeName.replace(/-/g, "");
       // console.log("Fetchname: ", fetchname);
       var artwork = "https://img.pokemondb.net/artwork/" + pokeName + ".jpg"
+      localStorage.setItem('PokemonArt', artwork);
       var gen6norm = "https://play.pokemonshowdown.com/sprites/xy/" + pokeName + ".png"
       var gen6shiny = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + pokeName + ".png"
       var gen6normani = "https://play.pokemonshowdown.com/sprites/xyani/" + pokeName + ".gif"

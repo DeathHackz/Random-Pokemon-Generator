@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"  />
   <link rel="stylesheet" href="css/Index.css">
   <link rel="stylesheet" href="css/Result.css">
+  <script src="res/html2canvas.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/pkdatesave.js"></script>
   <script src="js/pkminfo.js"></script>
@@ -26,7 +27,7 @@
 
 <body onload="getPokemon(), SetBday()">
 
-  <nav class="navbar navbar-inverse">
+  <nav data-html2canvas-ignore class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -130,13 +131,12 @@
   <div class="container-fluid text-center">
     <div class="row content">
       <div id="ad" class="col-sm-2 sidenav">
-        <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad2" src="ads/ad2.gif" alt="Stop Using Adblock!" width="120" height="600" /></a>
+        <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img  data-html2canvas-ignore id="ad2" src="ads/ad2.gif" alt="Stop Using Adblock!" width="120" height="600" /></a>
       </div>
       <div class="col-sm-8 text-left">
         <h1><span id="birtday"></span></h1>
-        <h1>"<a class="text-capitalize" title="" target="_blank" id="pkmnamedblk"><span class="text-capitalize" id="pkmname"><img id="loadingname" src="imgs/loadingalt.gif" height="50px"/></span></a>" is your <a id="hiddenbtn" onclick="blockrunbtn()" data-target="#UserValue">special</a> Pok&eacute;mon!</h1>
-        <p>This is your Pok&eacute;mon, now you can share this with your friends, download the image to your hard drive, or click its name for more info on it. </p>
-        <p style="font-weight:  bold;"><span id="iknowu"></span></p>
+        <h1>"<a class="text-capitalize" title="" target="_blank" id="pkmnamedblk"><span class="text-capitalize" id="pkmname"><img id="loadingname" src="imgs/loadingalt.gif" height="50px"/></span></a>" is <span id="rev2">your</span> <a id="hiddenbtn" onclick="blockrunbtn()" data-target="#UserValue">special</a> Pok&eacute;mon!</h1>
+        <p data-html2canvas-ignore>This is your Pok&eacute;mon, now you can share this with your friends, download the image to your hard drive, or click its name for more info on it. </p>
         <hr>
 
         <table id="artworktable" class="table">
@@ -221,24 +221,25 @@
             </tr>
           </tbody>
         </table>
-        <p><span id="requesttime"></span></p>
+        <p data-html2canvas-ignore><span id="requesttime"></span></p>
 
-        <div id="DownloadBtn" class="text-center">
+        <div data-html2canvas-ignore id="DownloadBtn" class="text-center">
           <a id="pkmdownload" class="btn btn-success btn-xl" disabled href="" download="">Download</a>
         </div>
 
-        <ul class="icons">
+        <ul data-html2canvas-ignore class="icons">
           <li><a onclick="return !window.open(this.href, 'facebook', 'width=500,height=500')" target="_blank" id="fbs"><i class="fa fa-facebook"></i></a></li>
           <li><a onclick="return !window.open(this.href, 'twitter', 'width=500,height=500')" target="_blank" id="twitshare"><i class="fa fa-twitter"></i></a></li>
           <li><a onclick="return !window.open(this.href, 'googleplus', 'width=500,height=500')" target="_blank" id="goglps"><i class="fab fa-google-plus-g"></i></a></li>
         </ul>
-        <div id="resetdiv"><a href="#" id="reset" class="btn btn-danger" name="submit" type="submit" onclick="dellocalstorage()">Clear localStorage</a></div>
+        <div data-html2canvas-ignore id="resetdiv"><a href="#" id="reset" class="btn btn-danger" name="submit" type="submit" onclick="dellocalstorage()">Clear localStorage</a></div>
+        <a data-html2canvas-ignore href="#" id="prt" class="btn btn-danger" name="submit" onclick="pgpt()" type="submit">Print</a>
         <table class="table">
           <thead>
             <tr>
               <th></th>
               <th style="width: 970px;">
-                <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad3" src="ads/ad3.gif" alt="Stop Using Adblock!" width="100%" height="100%" /></a>
+                <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img data-html2canvas-ignore id="ad3" src="ads/ad3.gif" alt="Stop Using Adblock!" width="100%" height="100%" /></a>
               </th>
               <th></th>
             </tr>
@@ -246,12 +247,12 @@
         </table>
       </div>
       <div id="ad" class="col-sm-2 sidenav">
-        <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad1" src="ads/ad1.gif" alt="Stop Using Adblock!" width="120" height="600" /></a>
+        <a href="http://lmgtfy.com/?q=how+to+cure+mental+retardation" target="_blank"><img id="ad1" data-html2canvas-ignore src="ads/ad1.gif" alt="Stop Using Adblock!" width="120" height="600" /></a>
       </div>
     </div>
   </div>
 
-  <footer class="container-fluid text-center">
+  <footer data-html2canvas-ignore class="container-fluid text-center">
     <p><span class="glyphicon glyphicon-copyright-mark"></span> </span> DeathHackz 2018</p>
   </footer>
 

@@ -42,7 +42,7 @@ function Birthday() {
 function SetBday() {
   var bday = JSON.parse(localStorage.getItem('bday'))["0"].value;
   var prtbd = document.getElementById('birtday');
-  birtday.innerHTML += "You're birthday is " + bday;
+  birtday.innerHTML += "<span id=rev>You're</span> birthday is " + bday;
 }
 
 function allFilled() {
@@ -89,4 +89,18 @@ function stopstarttime() {
     document.getElementById('stopbutton').value = "Stop";
     timestatus = 1;
   }
+}
+
+
+function pgpt() {
+  document.getElementById("rev").innerHTML = "My";
+  document.getElementById("rev2").innerHTML = "my";
+  html2canvas(document.body, {
+  allowTaint: true,
+  }).then(function(canvas) {
+      document.body.appendChild(canvas);
+      document.getElementById("rev").innerHTML = "You're";
+      document.getElementById("rev2").innerHTML = "your";
+  });
+
 }
