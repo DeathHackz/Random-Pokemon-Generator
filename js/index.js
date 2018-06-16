@@ -20,7 +20,6 @@ function dellocalstorage() {
   window.location.replace("index.html");
 };
 
-// Calender JS
 $(document).ready(function() {
   var date_input = $('input[name="date"]');
   var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
@@ -53,11 +52,10 @@ function allFilled() {
   return filled;
 }
 
-// Redirect JS
 var time_left = 10;
 var cinterval;
 var timestatus = 1;
-var redirect = "https://www.codepen.io/DeathHackz";
+var redirect = "https://github.com/DeathHackz?tab=repositories";
 
 function time_dec() {
   time_left--;
@@ -89,18 +87,4 @@ function stopstarttime() {
     document.getElementById('stopbutton').value = "Stop";
     timestatus = 1;
   }
-}
-
-
-function pgpt() {
-  document.getElementById("rev").innerHTML = "My";
-  document.getElementById("rev2").innerHTML = "my";
-  html2canvas(document.body, {
-  allowTaint: true,
-  }).then(function(canvas) {
-      document.body.appendChild(canvas);
-      document.getElementById("rev").innerHTML = "You're";
-      document.getElementById("rev2").innerHTML = "your";
-  });
-
 }

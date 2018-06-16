@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="css/Index.css">
   <script src="js/index.js"></script>
   <link rel="icon" href="imgs/favicon.ico" type="image/x-icon" />
-  <!-- Include Date Range Picker -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 </head>
@@ -38,7 +37,6 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#" data-toggle="modal" onfocusout="stopstarttime()" onclick="defaultstart()" data-target="#OtherProjModal">Other Projects</a></li>
           <li><a href="#" data-toggle="modal" data-target="#AboutModal">About</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#ContactModal">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -50,29 +48,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">About Me ;)</h4>
+          <h4 class="modal-title">About</h4>
         </div>
         <div class="modal-body">
-          <p>I'm a Hacker, I hacked the government multiple times, and I am the one who rigged the elections. I am on every federal watchlist because of my God-like hacking skillz. I am a MLG Pro hacker, who hacks with Mtn' Dew, and Doritos.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="modal fade" id="ContactModal" role="dialog">
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Contact</h4>
-        </div>
-        <div class="modal-body">
-          <p>Stalk someone else, k?</p>
+          <p>This website was made to randomly generate a pok&eacute;mon based on the users birthday.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -92,7 +71,7 @@
         </div>
         <div class="modal-body">
           <p>
-            Redirecting To CodePen In <span id="countdown"></span>
+            Redirecting To GitHub In <span id="countdown"></span>
           </p>
         </div>
         <div class="modal-footer">
@@ -112,27 +91,21 @@
         <h1>Find out who your special Pok&eacute;mon is!</h1>
         <p>Just enter in your birthday below and submit, and your special Pok&eacute;mon will be found and cought for you!</p>
         <hr>
-        <!-- Date Picker -->
         <div class="bootstrap-iso">
           <div class="container-fluid">
             <div class="col-md-4 col-sm-4 col-xs-12"><br /></div>
             <div class="row">
               <div class="col-md-4 col-sm-4 col-xs-12">
-
-                <!-- Form code begins -->
                 <form method="post">
                   <div class="form-group">
-                    <!-- Date input -->
                     <label class="control-label" for="date">Enter Your Birthday</label>
                     <input class="form-control" id="date" autocomplete="off" onfocusout="allFilled()" name="date" placeholder="Month, Day, Year" type="text" readonly/>
                   </div>
                   <div class="form-group">
-                    <!-- Submit button -->
                     <a href="Result.html" id="submitbtn" class="btn btn-primary" name="submit" type="submit" onclick="Birthday()" disabled="disabled">Submit</a>
                   </div>
                 </form>
                 <a href="#" id="reset" class="btn btn-danger" name="submit" type="submit" onclick="dellocalstorage()">Clear localStorage</a>
-                <!-- Form code ends -->
               </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12"><br /></div>
