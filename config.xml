@@ -13,6 +13,8 @@
         DeathHackz
     </author>
 
-    <platform name="android" />
+    <platform name="android">
+        <icon src="icon.png" width="1024" height="1024" />
+    </platform>
 
 </widget>
