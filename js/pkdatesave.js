@@ -1,5 +1,5 @@
 if (localStorage.getItem("randomNum") === null) {
-  randomNums()
+  randomNums();
 }
 
 function randomNums() {

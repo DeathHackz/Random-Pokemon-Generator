@@ -11,7 +11,7 @@ Papa.parse("https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv
       delete results.data[i].identifier;
 
       $(function() {
-        var availableTags = results.data
+        var availableTags = results.data;
         $("#UserChoice").autocomplete({
           source: availableTags,
           minLength: 2,
@@ -60,26 +60,26 @@ function getPokemon() {
       // console.log(pokeNameUp);
       var fetchname = pokeName.replace(/-/g, "");
       // console.log("Fetchname: ", fetchname);
-      var artwork = "https://img.pokemondb.net/artwork/" + pokeName + ".jpg"
+      var artwork = "https://img.pokemondb.net/artwork/" + pokeName + ".jpg";
       localStorage.setItem('PokemonArt', artwork);
-      var gen6norm = "https://play.pokemonshowdown.com/sprites/xy/" + pokeName + ".png"
-      var gen6shiny = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + pokeName + ".png"
-      var gen6normani = "https://play.pokemonshowdown.com/sprites/xyani/" + pokeName + ".gif"
-      var gen6shinyani = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + pokeName + ".gif"
-      var gen5norm = "https://play.pokemonshowdown.com/sprites/bw/" + pokeName + ".png"
-      var gen5shiny = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + pokeName + ".png"
-      var gen5normani = "https://play.pokemonshowdown.com/sprites/bwani/" + pokeName + ".gif"
-      var gen5shinyani = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + pokeName + ".gif"
+      var gen6norm = "https://play.pokemonshowdown.com/sprites/xy/" + pokeName + ".png";
+      var gen6shiny = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + pokeName + ".png";
+      var gen6normani = "https://play.pokemonshowdown.com/sprites/xyani/" + pokeName + ".gif";
+      var gen6shinyani = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + pokeName + ".gif";
+      var gen5norm = "https://play.pokemonshowdown.com/sprites/bw/" + pokeName + ".png";
+      var gen5shiny = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + pokeName + ".png";
+      var gen5normani = "https://play.pokemonshowdown.com/sprites/bwani/" + pokeName + ".gif";
+      var gen5shinyani = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + pokeName + ".gif";
 
-      var artworkbkup = "https://img.pokemondb.net/artwork/" + fetchname + ".jpg"
-      var gen6normbkup = "https://play.pokemonshowdown.com/sprites/xy/" + fetchname + ".png"
-      var gen6shinybkup = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + fetchname + ".png"
-      var gen6normanibkup = "https://play.pokemonshowdown.com/sprites/xyani/" + fetchname + ".gif"
-      var gen6shinyanibkup = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + fetchname + ".gif"
-      var gen5normbkup = "https://play.pokemonshowdown.com/sprites/bw/" + fetchname + ".png"
-      var gen5shinybkup = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + fetchname + ".png"
-      var gen5normanibkup = "https://play.pokemonshowdown.com/sprites/bwani/" + fetchname + ".gif"
-      var gen5shinyanibkup = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + fetchname + ".gif"
+      var artworkbkup = "https://img.pokemondb.net/artwork/" + fetchname + ".jpg";
+      var gen6normbkup = "https://play.pokemonshowdown.com/sprites/xy/" + fetchname + ".png";
+      var gen6shinybkup = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + fetchname + ".png";
+      var gen6normanibkup = "https://play.pokemonshowdown.com/sprites/xyani/" + fetchname + ".gif";
+      var gen6shinyanibkup = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + fetchname + ".gif";
+      var gen5normbkup = "https://play.pokemonshowdown.com/sprites/bw/" + fetchname + ".png";
+      var gen5shinybkup = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + fetchname + ".png";
+      var gen5normanibkup = "https://play.pokemonshowdown.com/sprites/bwani/" + fetchname + ".gif";
+      var gen5shinyanibkup = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + fetchname + ".gif";
 
       document.title = pokeNameUp + " is your special Pok" + "\xE9" + "mon!";
       function checkImage(imageSrc, bad, good) {
@@ -226,12 +226,12 @@ function getPokemon() {
     });
 
   }).catch(function(err) {
-    alert("An error has occured with PokiAPI V2");
+    alert("An error has occurred with PokiAPI V2");
 
-  })
+  });
 
 
-};
+}
 
 function CustomPkm() {
   var delay1 = 1;
@@ -268,7 +268,7 @@ function enterstuff() {
 function blockrunbtn() {
   var filled = $('#cstmrunpkm').removeAttr('disabled');
   $('body input').each(function() {
-    if ($(this).val() == '') filled = $('#cstmrunpkm').attr('disabled', true);
+    if ($(this).val() === '') filled = $('#cstmrunpkm').attr('disabled', true);
   });
   return filled;
 }
@@ -305,25 +305,25 @@ function getUserPokemon() {
       // console.log(pokeNameUp);
       var fetchname = pokeName.replace(/-/g, "");
       // console.log("Fetchname: ", fetchname);
-      var artwork = "https://img.pokemondb.net/artwork/" + pokeName + ".jpg"
-      var gen6norm = "https://play.pokemonshowdown.com/sprites/xy/" + pokeName + ".png"
-      var gen6shiny = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + pokeName + ".png"
-      var gen6normani = "https://play.pokemonshowdown.com/sprites/xyani/" + pokeName + ".gif"
-      var gen6shinyani = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + pokeName + ".gif"
-      var gen5norm = "https://play.pokemonshowdown.com/sprites/bw/" + pokeName + ".png"
-      var gen5shiny = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + pokeName + ".png"
-      var gen5normani = "https://play.pokemonshowdown.com/sprites/bwani/" + pokeName + ".gif"
-      var gen5shinyani = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + pokeName + ".gif"
+      var artwork = "https://img.pokemondb.net/artwork/" + pokeName + ".jpg";
+      var gen6norm = "https://play.pokemonshowdown.com/sprites/xy/" + pokeName + ".png";
+      var gen6shiny = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + pokeName + ".png";
+      var gen6normani = "https://play.pokemonshowdown.com/sprites/xyani/" + pokeName + ".gif";
+      var gen6shinyani = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + pokeName + ".gif";
+      var gen5norm = "https://play.pokemonshowdown.com/sprites/bw/" + pokeName + ".png";
+      var gen5shiny = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + pokeName + ".png";
+      var gen5normani = "https://play.pokemonshowdown.com/sprites/bwani/" + pokeName + ".gif";
+      var gen5shinyani = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + pokeName + ".gif";
 
-      var artworkbkup = "https://img.pokemondb.net/artwork/" + fetchname + ".jpg"
-      var gen6normbkup = "https://play.pokemonshowdown.com/sprites/xy/" + fetchname + ".png"
-      var gen6shinybkup = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + fetchname + ".png"
-      var gen6normanibkup = "https://play.pokemonshowdown.com/sprites/xyani/" + fetchname + ".gif"
-      var gen6shinyanibkup = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + fetchname + ".gif"
-      var gen5normbkup = "https://play.pokemonshowdown.com/sprites/bw/" + fetchname + ".png"
-      var gen5shinybkup = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + fetchname + ".png"
-      var gen5normanibkup = "https://play.pokemonshowdown.com/sprites/bwani/" + fetchname + ".gif"
-      var gen5shinyanibkup = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + fetchname + ".gif"
+      var artworkbkup = "https://img.pokemondb.net/artwork/" + fetchname + ".jpg";
+      var gen6normbkup = "https://play.pokemonshowdown.com/sprites/xy/" + fetchname + ".png";
+      var gen6shinybkup = "https://play.pokemonshowdown.com/sprites/xy-shiny/" + fetchname + ".png";
+      var gen6normanibkup = "https://play.pokemonshowdown.com/sprites/xyani/" + fetchname + ".gif";
+      var gen6shinyanibkup = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + fetchname + ".gif";
+      var gen5normbkup = "https://play.pokemonshowdown.com/sprites/bw/" + fetchname + ".png";
+      var gen5shinybkup = "https://play.pokemonshowdown.com/sprites/bw-shiny/" + fetchname + ".png";
+      var gen5normanibkup = "https://play.pokemonshowdown.com/sprites/bwani/" + fetchname + ".gif";
+      var gen5shinyanibkup = "https://play.pokemonshowdown.com/sprites/bwani-shiny/" + fetchname + ".gif";
 
       document.title = pokeNameUp + " is your special Pok" + "\xE9" + "mon!";
 
@@ -479,9 +479,9 @@ function getUserPokemon() {
     });
 
   }).catch(function(err) {
-    alert("An error has occured with PokiAPI V2 or you inputted an invalid value");
+    alert("An error has occurred with PokiAPI V2 or you inputted an invalid value");
 
-  })
+  });
 
 
-};
+}

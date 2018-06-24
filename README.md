@@ -1,5 +1,5 @@
 # Random Pok&eacute;mon Generator
-Generate a random pokémon based on your birthday
+Generate a random pok&eacute;mon based on your birthday
 
 This is a simple project that generates a random pok&eacute;mon based on your birthday.
 
