@@ -5,8 +5,6 @@ This is a simple project that generates a random pok&eacute;mon based on your bi
 
 (This is not well made by no means at all)
 
-Try it out at: https://deathhackz.github.io/Random-Pokemon-Generator
-
 ## How does it work?
 1. Generate 365 Pok&eacute;mon id's for each day of the year, and store them as an array in LocalStorage
 2. Match the users birthday to the pok&eacute;mon id's in the array
